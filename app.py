@@ -80,7 +80,7 @@ if lg == 2:
               \nPasso 3.2. Encontre o arquivo TRichClient.exe. \
               \nPasso 3.3. Neste arquivo, selecione-o, clique com o botão direito do mouse nele e clique em _Criar Atalho_. \
               \nPasso 3.4. No atalho criado, clique com o botão direito do mouse nele e selecione o campo _Propriedades_. \
-              \nPasso 3.5. Na janela aberta, busque a aba _Atalho_, e no campo _Destino_, insirá o seguinte texto: __"C:\\Program Files (x86)\\SPIN\Action.NET\\an-9.1\\TRichClient.exe" /ip1:192.168.0.175 /port1:3101_'\
+              \nPasso 3.5. Na janela aberta, busque a aba _Atalho_, e no campo _Destino_, insirá o seguinte texto: "C:\\Program Files (x86)\\SPIN\Action.NET\\an-9.1\\TRichClient.exe" /ip1:_inserir o IP apresentado no cadastro_ /port1:3101'\
               '\n'
     text16 = '**Passo 4. Acesso ao sistema de supervisão**'
     text17 = '\nRealize o acesso a VPN (_usuário_: usr.opendss | _senha_: usr.opendss) \
@@ -110,7 +110,7 @@ if(selected == '' or selected == menu[0]):
                 value = "Verifique o dados inseridos. Todos os campos são obrigatórios"
                 ok = 0
             else:
-                value = "Cadastro efetuado!"
+                value = "Cadastro efetuado!\nIP: 192.168.0.175"
                 ok = 1
             
             col1, col2 = st.columns(2)
