@@ -70,14 +70,21 @@ st.title(titulo)
 ## MENU: INICIO (HOME):
 if lg == 2:
     text11 = 'A plataforma foi desenvolvida utilizando o software SCADA ActionNET integrado à ferramenta OpenDSS.\n Para utilizar siga os seguintes passos:'
-    text12 = '**1. Baixe o software SCADA ActionNET. Siga as instruções apresentadas no processo de instalação.**\
+    text12 = '**Passo 1. Baixe o software SCADA ActionNET. Siga as instruções apresentadas no processo de instalação.**\
             \n_Pré-requisito: .NET framework 9.6.2 ou superior._'
     textbtn11 = 'Abra o navegador para baixar o software ActionNET'
-    text13 = '**2. Baixe a VPN para conectar a nuvem da SPIN Engenharia. Siga as instruções apresentadas no processo de instalação.**'
+    text13 = '**Passo 2. Baixe a VPN para conectar a nuvem da SPIN Engenharia. Siga as instruções apresentadas no processo de instalação.**'
     textbtn12 = 'Abra o navegador para baixar a VPN'
-    text14 = '**3. Baixe o atalho para acesso ao sistema.**\
-            \n_O software ActionNET deve ser instalado no diretório C_'
-    textbtn13 = 'Abra o navegador para baixar o RichClient'
+    text14 = '**Passo 3. Configuração do cliente de visualização do sistema.**'
+    text15 = 'Passo 3.1. No diretório de instalação do ActionNET localize a pasta an-9.1. \
+              \nPasso 3.2. Encontre o arquivo TRichClient.exe. \
+              \nPasso 3.3. Neste arquivo, selecione-o, clique com o botão direito do mouse nele e clique em _Criar Atalho_. \
+              \nPasso 3.4. No atalho criado, clique com o botão direito do mouse nele e selecione o campo _Propriedades_. \
+              \nPasso 3.5. Na janela aberta, busque a aba _Atalho_, e no campo _Destino_, insirá o seguinte texto: _"C:\Program Files (x86)\SPIN\Action.NET\an-9.1\TRichClient.exe" /ip1:192.168.0.175 /port1:3101_'\
+              '\n'
+    text16 = '**Passo 4. Acesso ao sistema de supervisão**'
+    text17 = '\nRealize o acesso a VPN (_usuário_: usr.opendss | _senha_: usr.opendss) \
+              \nApós a VPN conectada, clique sobre o atalho do TRichClient.'
 
 if(selected == '' or selected == menu[0]):
     st.markdown(text11)
@@ -124,9 +131,9 @@ if(selected == '' or selected == menu[0]):
         webbrowser.open_new_tab(url_VPN)
 
     st.markdown(text14)
-
-    if st.button(textbtn13):
-        webbrowser.open_new_tab(url_TRichClient)
+    st.markdown(text15)
+    st.markdown(text16)
+    st.markdown(text17)
 
 ## MENU: Tempo Real (Real Time):
 if lg == 2:
