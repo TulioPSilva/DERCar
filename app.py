@@ -50,8 +50,8 @@ def gravar_cadastro(cad):
     w.writerow(cad)
     f.close()
 
-#image = Image.open("logo__car.png")
-# # st.sidebar.image(image)
+image_logo = Image.open("logo__car.png")
+st.sidebar.image(image_logo)
 
 with st.sidebar:
     selected = option_menu(None, menu, 
