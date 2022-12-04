@@ -1,7 +1,0 @@
-pandas
-seaborn
-matplotlib
-streamlit
-streamlit-option-menu
-streamlit-modal
-csv
