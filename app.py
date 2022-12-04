@@ -35,7 +35,7 @@ url_VPN = 'https://www.dropbox.com/s/3t2fvnmkfmwbp6k/openvpn-SPIN_SRV-FW001-UDP4
 url_TRichClient = 'https://www.dropbox.com/s/ryjpmrqyidpe1h6/TRichClient.lnk?dl=0'
 
 #Imagens:
-#img_arranjo_simu = Image.open("arranjo_simu.png")
+img_arranjo_simu = Image.open("arranjo_simu.png")
 # img_arranjo_simu = Image.open(arranjo_simu)
 # img_iee8500 = Image.open("ieee8500.png")
 # img_trend_carregamento = Image.open("trand_c.png")
