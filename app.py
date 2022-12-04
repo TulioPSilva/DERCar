@@ -157,8 +157,7 @@ if(selected == menu[1]):
         st.markdown(text22)
         st.markdown(text23)
     with col2:
-        pass
-        #st.image(img_arranjo_simu)
+        st.image(img_arranjo_simu)
 
     st.markdown(text24)
 
