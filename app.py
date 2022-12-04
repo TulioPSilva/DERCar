@@ -123,7 +123,6 @@ if(selected == '' or selected == menu[0]):
             if ok == 1:
                 gravar_cadastro(cad)
                 webbrowser.open_new_tab(url_actionnet)
-                modal.close()
 
     st.markdown(text13)
     
