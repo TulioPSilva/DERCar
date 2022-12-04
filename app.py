@@ -37,10 +37,10 @@ url_TRichClient = 'https://www.dropbox.com/s/ryjpmrqyidpe1h6/TRichClient.lnk?dl=
 #Imagens:
 img_arranjo_simu = Image.open("arranjo_simu.png")
 img_iee8500 = Image.open("ieee8500.jpg")
-# img_trend_carregamento = Image.open("trand_c.png")
-# img_trend_injecao = Image.open("trand_j.png")
-# img_trend_legenda = Image.open("trend_legenda.png")
-# img_screen1 = Image.open("Screen1.png")
+img_trend_carregamento = Image.open("trand_c.png")
+img_trend_injecao = Image.open("trand_j.png")
+img_trend_legenda = Image.open("trend_legenda.png")
+img_screen1 = Image.open("Screen1.png")
 
 #Salvar dados de cadastro:
 def gravar_cadastro(cad):
