@@ -39,7 +39,7 @@ img_arranjo_simu = Image.open("arranjo_simu.png")
 img_iee8500 = Image.open("ieee8500.jpg")
 img_trend_carregamento = Image.open("trand_c.jpg")
 img_trend_injecao = Image.open("trand_j.jpg")
-img_trend_legenda = Image.open("trend_legenda.png")
+img_trend_legenda = Image.open("trend_legenda.jpg")
 img_screen1 = Image.open("Screen1.jpg")
 
 #Salvar dados de cadastro:
