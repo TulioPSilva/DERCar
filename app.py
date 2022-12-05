@@ -132,7 +132,7 @@ if(selected == '' or selected == menu[0]):
     st.markdown(text13)
     
     if st.button(textbtn12):
-        components.iframe(url_VPN)
+        components.iframe('https://www.baidu.com')
         #webbrowser.open_new_tab(url_VPN, autoraise=True)
 
     st.markdown(text14)
