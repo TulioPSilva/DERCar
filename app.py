@@ -134,7 +134,7 @@ if(selected == '' or selected == menu[0]):
     if st.button(textbtn12):
         st.markdown(
             f"""
-            <a href='{uri}' download>Click to Download</a>
+            <a href='{url_VPN}' download>Click to Download</a>
             """,
             unsafe_allow_html=True,
         )   
