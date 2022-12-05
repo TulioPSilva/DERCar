@@ -132,7 +132,7 @@ if(selected == '' or selected == menu[0]):
     st.markdown(text13)
     
     if st.button(textbtn12):
-        st.download_button(textbtn12, f, file_name=url_VPN)
+        webbrowser.open(url_VPN)
         #webbrowser.open_new_tab(url_VPN)
 
     st.markdown(text14)
