@@ -132,8 +132,8 @@ if(selected == '' or selected == menu[0]):
     st.markdown(text13)
     
     if st.button(textbtn12):
-        webbrowser.open(url_VPN)
-        #webbrowser.open_new_tab(url_VPN)
+        webbrowser.open(url_VPN, autoraise=True)
+        #webbrowser.open_new_tab(url_VPN, autoraise=True)
 
     st.markdown(text14)
     st.markdown(text15)
