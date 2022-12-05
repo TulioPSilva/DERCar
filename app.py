@@ -131,14 +131,13 @@ if(selected == '' or selected == menu[0]):
 
     st.markdown(text13)
     
-    if st.button(textbtn12):
-        st.markdown(
+    st.button(st.markdown(
             f"""
-            <a href='{url_VPN}' download>Click to Download</a>
+            <a href='{url_VPN}' download>Abra o navegador para baixar a VPN</a>
             """,
             unsafe_allow_html=True,
-        )   
-
+        ))
+        
     st.markdown(text14)
     st.markdown(text15)
 
