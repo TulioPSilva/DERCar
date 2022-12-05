@@ -5,6 +5,7 @@ from PIL import Image
 from streamlit_modal import Modal
 import streamlit.components.v1 as components
 import csv
+from send import send_msg
 
 #Definição da liguagem:
 lingua = 'português'
