@@ -80,11 +80,20 @@ if lg == 2:
               \nPasso 3.2. Encontre o arquivo TRichClient.exe. \
               \nPasso 3.3. Neste arquivo, selecione-o, clique com o botão direito do mouse nele e clique em _Criar Atalho_. \
               \nPasso 3.4. No atalho criado, clique com o botão direito do mouse nele e selecione o campo _Propriedades_. \
-              \nPasso 3.5. Na janela aberta, busque a aba _Atalho_, e no campo _Destino_, insirá o seguinte texto: "C:\\Program Files (x86)\\SPIN\Action.NET\\an-9.1\\TRichClient.exe" /ip1:_inserir o IP apresentado no cadastro_ /port1:3101'\
+              \nPasso 3.5. Na janela aberta, busque a aba _Atalho_, e no campo _Destino_, insirá o seguinte texto: "C:\\Program Files (x86)\\SPIN\Action.NET\\an-9.1\\TRichClient.exe" /ip1:<_inserir o IP apresentado no cadastro_> /port1:3101'\
               '\n'
-    text16 = '**Passo 4. Acesso ao sistema de supervisão**'
-    text17 = '\nRealize o acesso a VPN (_usuário_: usr.opendss | _senha_: usr.opendss) \
-              \nApós a VPN conectada, clique sobre o atalho do TRichClient.'
+    text16 = '**Passo 4. Habilitar ambiente Python**'
+    text17 = '_Pré-requisito: .Python 3.8 ou superior._'
+    textbtn13 = 'Abra o navegador para baixar a pasta contendo os arquivos desta sessão (descompacte a pasta)'
+    text18 = '\nPasso 4.1. Execute o arquivo .bat _create_files_\
+              \nPasso 4.2. Execute o arquivo .bat _create_virtual_ \
+              \nPasso 4.3. Copie os arquivos: getAnalises.py, getElementPowerflow.py, getLines.py, getPowerflow.py e cole-os no caminho _C:/Action.NET/ProjectsPython/DERCar_ \
+              \nPasso 4.4. Copie os arquivo: requirements.txt e cole-os no caminho _C:/Action.NET/ProjectsPython/DERCar/venv/Scripts_ \
+              \nPasso 4.5. Execute o arquivo .bat _activate_python_'
+    text19 = '**Passo 4. Acesso ao sistema de supervisão**'
+    text20 = '\nRealize o acesso a VPN (_usuário_: usr.opendss | _senha_: usr.opendss) \
+              \nApós a VPN conectada, clique sobre o atalho do TRichClient. \
+              (_usuário_: super | _sem senha_)'
 
 if(selected == '' or selected == menu[0]):
     st.markdown(text11)
@@ -131,8 +140,15 @@ if(selected == '' or selected == menu[0]):
 
     st.markdown(text14)
     st.markdown(text15)
+
     st.markdown(text16)
     st.markdown(text17)
+    if st.button(textbtn13):
+        webbrowser.open_new_tab(url_files)
+
+    st.markdown(text18)
+    st.markdown(text19)
+    st.markdown(text20)
 
 ## MENU: Tempo Real (Real Time):
 if lg == 2:
