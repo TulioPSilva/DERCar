@@ -77,8 +77,6 @@ def get_cadastro(nome,email,empresa,cargo):
         webbrowser.open_new_tab(url_actionnet)
         send_msg(msg)
         st.success("Cadastro efetuado!\nIP: 192.168.0.175", icon="✅")
-        
-    return value
 
 if lg == 2:
     text11 = 'A plataforma foi desenvolvida utilizando o software SCADA ActionNET integrado à ferramenta OpenDSS.\n Para utilizar siga os seguintes passos:'
