@@ -74,9 +74,10 @@ def get_cadastro(nome,email,empresa,cargo):
         st.error("Verifique o dados inseridos. Todos os campos são obrigatórios", icon="🚨")
     else:
         msg = f'Nome: {nome}\nEmail: {email}\nEmpresa: {empresa}\nCargo: {cargo}' 
+        webbrowser.open_new_tab(url_actionnet)
         send_msg(msg)
         st.success("Cadastro efetuado!\nIP: 192.168.0.175", icon="✅")
-        webbrowser.open_new_tab(url_actionnet)
+        
     return value
 
 if lg == 2:
