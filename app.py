@@ -77,7 +77,13 @@ def get_cadastro(nome,email,empresa,cargo):
         msg = f'Nome: {nome}\nEmail: {email}\nEmpresa: {empresa}\nCargo: {cargo}' 
         webbrowser.open_new_tab(url_actionnet)
         send_msg(msg)
-        st.success("Cadastro efetuado!\nIP: 192.168.0.175", icon="✅")
+        st.success("Cadastro efetuado!\nIP: 192.168.0.175",
+        st.markdown(
+            f"""
+            <a href='{uri}' download>Click to Download</a>
+            """,
+            unsafe_allow_html=True,
+        ), icon="✅")
 
 if lg == 2:
     text11 = 'A plataforma foi desenvolvida utilizando o software SCADA ActionNET integrado à ferramenta OpenDSS.\n Para utilizar siga os seguintes passos:'
@@ -85,7 +91,6 @@ if lg == 2:
             \n_Pré-requisito: .NET framework 9.6.2 ou superior._'
     textbtn11 = 'Abra o navegador para baixar o software ActionNET'
     text13 = '**Passo 2. Baixe a VPN para conectar a nuvem da SPIN Engenharia. Siga as instruções apresentadas no processo de instalação.**'
-    textbtn12 = 'Abra o navegador para baixar a VPN'
     text14 = '**Passo 3. Configuração do cliente de visualização do sistema.**'
     text15 = 'Passo 3.1. No diretório de instalação do ActionNET localize a pasta an-9.1. \
               \nPasso 3.2. Encontre o arquivo TRichClient.exe. \
@@ -131,12 +136,12 @@ if(selected == '' or selected == menu[0]):
 
     st.markdown(text13)
     
-    st.button(st.markdown(
-            f"""
-            <a href='{url_VPN}' download>Abra o navegador para baixar a VPN</a>
-            """,
-            unsafe_allow_html=True,
-        ))
+    st.markdown(
+        f"""
+        <a href='{url_VPN}' download>Abra o navegador para baixar a VPN</a>
+        """,
+        unsafe_allow_html=True,
+     )
         
     st.markdown(text14)
     st.markdown(text15)
