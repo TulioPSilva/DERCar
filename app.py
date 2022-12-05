@@ -93,7 +93,7 @@ if lg == 2:
     text11 = 'A plataforma foi desenvolvida utilizando o software SCADA ActionNET integrado à ferramenta OpenDSS.\n Para utilizar siga os seguintes passos:'
     text12 = '**Passo 1. Baixe o software SCADA ActionNET. Siga as instruções apresentadas no processo de instalação.**\
             \n_Pré-requisito: .NET framework 9.6.2 ou superior._'
-    textbtn11 = 'Abra o navegador para baixar o software ActionNET'
+    textbtn11 = 'Baixar o software ActionNET'
     text13 = '**Passo 2. Baixe a VPN para conectar a nuvem da SPIN Engenharia. Siga as instruções apresentadas no processo de instalação.**'
     text14 = '**Passo 3. Configuração do cliente de visualização do sistema.**'
     text15 = 'Passo 3.1. No diretório de instalação do ActionNET localize a pasta an-9.1. \
@@ -104,7 +104,6 @@ if lg == 2:
               '\n'
     text16 = '**Passo 4. Habilitar ambiente Python**'
     text17 = '_Pré-requisito: .Python 3.8 ou superior._'
-    textbtn13 = 'Abra o navegador para baixar a pasta contendo os arquivos desta sessão (descompacte a pasta)'
     text18 = '\nPasso 4.1. Execute o arquivo .bat _create_files_\
               \nPasso 4.2. Execute o arquivo .bat _create_virtual_ \
               \nPasso 4.3. Copie os arquivos: getAnalises.py, getElementPowerflow.py, getLines.py, getPowerflow.py e cole-os no caminho _C:/Action.NET/ProjectsPython/DERCar_ \
@@ -152,9 +151,12 @@ if(selected == '' or selected == menu[0]):
 
     st.markdown(text16)
     st.markdown(text17)
-    if st.button(textbtn13):
-        webbrowser.open_new_tab(url_files)
-
+    st.markdown(
+        f"""
+        <a href='{url_files}' download>Abra o navegador para baixar a pasta contendo os arquivos desta sessão (descompacte a pasta)</a>
+        """,
+        unsafe_allow_html=True,
+    )
     st.markdown(text18)
     st.markdown(text19)
     st.markdown(text20)
