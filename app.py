@@ -35,6 +35,7 @@ url_actionnet = 'https://www.dropbox.com/s/3vd8azx9qm0nldm/Action.NET%209.1.25.1
 #url_VPN = 'https://www.dropbox.com/s/3t2fvnmkfmwbp6k/openvpn-SPIN_SRV-FW001-UDP4-1196-usr.opendss-install-2.5.2-I601-amd64.exe?dl=0'
 url_VPN = 'https://github.com/TulioPSilva/DERCar/blob/main/openvpn-SPIN_SRV-FW001-UDP4-1196-usr.opendss-install-2.5.2-I601-amd64.exe'
 url_TRichClient = 'https://www.dropbox.com/s/ryjpmrqyidpe1h6/TRichClient.lnk?dl=0'
+url_files = 'https://github.com/TulioPSilva/DERCar/blob/main/DERCar.zip'
 
 #Imagens:
 img_arranjo_simu = Image.open("arranjo_simu.png")
