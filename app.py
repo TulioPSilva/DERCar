@@ -68,6 +68,16 @@ with st.sidebar:
 st.title(titulo)
 
 ## MENU: INICIO (HOME):
+def get_cadastro(nome,email,empresa,cargo):
+    if nome == "" or email == "" or empresa == "" or cargo == "":
+        st.error("Verifique o dados inseridos. Todos os campos são obrigatórios", icon="🚨")
+    else:
+        msg = f'Nome: {nome}\nEmail: {email}\nEmpresa: {empresa}\nCargo: {cargo}' 
+        send_msg(msg)
+        st.success("Cadastro efetuado!\nIP: 192.168.0.175", icon="✅")
+        webbrowser.open_new_tab(url_actionnet)
+    return value
+
 if lg == 2:
     text11 = 'A plataforma foi desenvolvida utilizando o software SCADA ActionNET integrado à ferramenta OpenDSS.\n Para utilizar siga os seguintes passos:'
     text12 = '**Passo 1. Baixe o software SCADA ActionNET. Siga as instruções apresentadas no processo de instalação.**\
@@ -115,23 +125,8 @@ if(selected == '' or selected == menu[0]):
             cargo = st.text_input('Cargo:', help='campo obrigatorio')
             cad = nome,email,empresa,cargo
 
-            if nome == "" or email == "" or empresa == "" or cargo == "":
-                value = "Verifique o dados inseridos. Todos os campos são obrigatórios"
-                ok = 0
-            else:
-                value = "Cadastro efetuado!\nIP: 192.168.0.175"
-                ok = 1
-            
-            col1, col2 = st.columns(2)
-            with col1:
-                fim = st.button('Finalizar cadastro')
-            with col2:
-                if fim:
-                    st.write(f"{value}")
-            
-            if ok == 1:
-                gravar_cadastro(cad)
-                webbrowser.open_new_tab(url_actionnet)
+            if st.button('Finalizar cadastro'):
+                get_cadastro(nome,email,empresa,cargo)
 
     st.markdown(text13)
     
